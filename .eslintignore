@@ -1,0 +1,5 @@
+config/**
+.eslintrc.js
+**/*.d.ts
+
+src/stories/**
