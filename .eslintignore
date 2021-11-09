@@ -3,3 +3,4 @@ config/**
 **/*.d.ts
 
 src/stories/**
+src/resources/plugins/**

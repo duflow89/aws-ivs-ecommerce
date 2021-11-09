@@ -1,4 +1,4 @@
-import IVSPlayer from 'amazon-ivs-player';
+import IVSPlayer from './amazon-ivs-player';
 
 declare global {
   interface Window {
