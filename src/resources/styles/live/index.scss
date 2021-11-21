@@ -1,0 +1,104 @@
+.live {
+  position: relative;
+  .live-video {
+    video {
+      height: 100vh;
+      vertical-align: middle;
+    }
+  }
+
+  &-header {
+    opacity: 0.95;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 1.5rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    &-row1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    &-row2 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 6rem;
+    }
+  }
+  &-status {
+    display: inline-block;
+    min-width: 5rem;
+    padding: 0 0.5rem;
+    border-radius: 100px;
+    background-color: #888;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    line-height: 2.6rem;
+    &.status-live {
+      background-color: #ee2424;
+      color: #fef62f;
+    }
+  }
+  &-view-count {
+    &-icon {
+      width: 2rem;
+      height: 2.4rem;
+      vertical-align: top;
+    }
+  }
+  &-menu {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5rem;
+    &-btn {
+      opacity: 0.9;
+      height: 3.5rem;
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+  }
+  &-title {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &-bj {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &-thumbnail {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 5rem;
+      height: 5rem;
+      margin-top: -2.5rem;
+      overflow: hidden;
+      border-radius: 100rem;
+    }
+    &-name {
+      font-weight: 300;
+    }
+    &-follow {
+      padding: 0 2rem;
+      border: 1px solid #fff;
+      border-radius: 10rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 2.3rem;
+    }
+  }
+}

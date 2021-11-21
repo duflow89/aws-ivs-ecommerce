@@ -1,13 +1,14 @@
-import IVSPlayer from './amazon-ivs-player';
+import * as IVSPlayer from 'amazon-ivs-player';
 
 declare global {
   interface Window {
-    IVSPlayer;
+    readonly IVSPlayer: Omit<typeof IVSPlayer, 'create'> & {
+      create(): IVSPlayer.MediaPlayer;
+    };
   }
-}
 
-declare module '*.jpg';
-declare module '*.jpeg';
-declare module '*.png';
-declare module '*.svg';
-declare module '*.svg';
+  module '*.jpg';
+  module '*.jpeg';
+  module '*.png';
+  module '*.svg';
+}

@@ -1,15 +1,21 @@
-const App = () => {
-  const { isPlayerSupported } = window.IVSPlayer;
-  console.log(isPlayerSupported);
+import { Route, Routes } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import { ROUTE_PATH } from '~/constants/path';
+import Live from './Live';
+import Intro from './Intro';
 
-  return (
-    <>
-      <div>
-        <h1>AWS IVS E-COMMERCE</h1>
-        <h2>isPlayerSupported: {isPlayerSupported.toString()}</h2>
-      </div>
-    </>
-  );
-};
+const App = () => (
+  <BrowserRouter>
+    <div className='wrap'>
+      <Routes>
+        <Route path={ROUTE_PATH.ROOT} element={<Intro />} />
+        <Route path={ROUTE_PATH.LIVE} element={<Live />} />
+
+        {/* Empty Page Redirect */}
+        <Route path='*' element={<Intro />} />
+      </Routes>
+    </div>
+  </BrowserRouter>
+);
 
 export default App;

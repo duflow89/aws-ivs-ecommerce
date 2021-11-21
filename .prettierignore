@@ -1,3 +1,7 @@
+build
 dist
-reset.css
-resources/plugins/*.min.js
+coverage
+
+src/resources/plugins/*
+
+_reset.scss

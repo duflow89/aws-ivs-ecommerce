@@ -1,6 +1,7 @@
-config/**
-.eslintrc.js
-**/*.d.ts
+dist
+config
+.yarn
 
-src/stories/**
-src/resources/plugins/**
+src/resources/plugins/*
+
+**/*.d.ts
